@@ -332,16 +332,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20201112213946_m1.cs" />
+    <Compile Include="Migrations\20201112213946_m1.designer.cs">
+      <DependentUpon>20201112213946_m1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20201112214107_m2.cs" />
+    <Compile Include="Migrations\20201112214107_m2.designer.cs">
+      <DependentUpon>20201112214107_m2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PlaceMyBetContextModelSnapshot.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Apuestas.cs" />
+    <Compile Include="Models\Apuesta.cs" />
     <Compile Include="Models\ApuestasRepository.cs" />
-    <Compile Include="Models\Eventos.cs" />
+    <Compile Include="Models\Cuenta.cs" />
+    <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\EventosRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Mercados.cs" />
+    <Compile Include="Models\Mercado.cs" />
     <Compile Include="Models\MercadosRepository.cs" />
-    <Compile Include="Models\Usuarios.cs" />
+    <Compile Include="Models\PlaceMyBetContext.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuariosRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />

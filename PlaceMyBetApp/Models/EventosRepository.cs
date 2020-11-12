@@ -1,5 +1,6 @@
 ﻿using Microsoft.Ajax.Utilities;
 using MySql.Data.MySqlClient;
+using PlaceMyBetApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,66 +11,23 @@ namespace AE2.Models
 {
     public class EventosRepository
     {
-        /*
-        private MySqlConnection Connect()
+        internal List<Evento> Retrieve()
         {
-            string connString = "Server=127.0.0.1;Port=3306;DataBase=placemybet;UID=root;password=;SslMode=none";
-            MySqlConnection con = new MySqlConnection(connString);
+            List<Evento> eventos = new List<Evento>();
+            using (PlaceMyBetContext context = new PlaceMyBetContext())
+            {
+                eventos = context.Eventos.ToList();
+            }
 
-            return con;
+            return eventos;
         }
 
-        internal List<Eventos> Retrieve()
+        internal void Save(Evento evento)
         {
-            MySqlConnection con  = Connect();
-            MySqlCommand command = con.CreateCommand();
-            command.CommandText  = "select * from eventos";
+            PlaceMyBetContext context = new PlaceMyBetContext();
 
-            try
-            {
-                con.Open();
-                MySqlDataReader res = command.ExecuteReader();
-
-                List<Eventos> eves = new List<Eventos>();
-
-                while (res.Read()) eves.Add(new Eventos(res.GetInt32(0), res.GetString(1), res.GetString(2), res.GetDateTime(3)));
-
-                con.Close();
-
-                return eves;
-            }
-            catch(MySqlException e)
-            {
-                Debug.WriteLine("Se ha producido un error: " + e);
-                return null;
-            }
+            context.Eventos.Add(evento);
+            context.SaveChanges();
         }
-
-        internal List<EventosDTO> RetrieveDTO()
-        {
-            MySqlConnection con  = Connect();
-            MySqlCommand command = con.CreateCommand();
-            command.CommandText  = "select * from eventos";
-
-            try
-            {
-                con.Open();
-                MySqlDataReader res = command.ExecuteReader();
-
-                List<EventosDTO> eves = new List<EventosDTO>();
-
-                while (res.Read()) eves.Add(new EventosDTO(res.GetString(1), res.GetString(2), res.GetDateTime(3)));
-
-                con.Close();
-
-                return eves;
-            }
-            catch (MySqlException e)
-            {
-                Debug.WriteLine("Se ha producido un error: " + e);
-                return null;
-            }
-        }
-        */
     }
 }

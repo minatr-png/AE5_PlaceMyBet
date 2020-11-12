@@ -9,7 +9,7 @@ namespace AE2.Models
 {
     public class UsuariosRepository
     {
-        private MySqlConnection Connect()
+        /*private MySqlConnection Connect()
         {
             string connString = "Server=127.0.0.1;Port=3306;DataBase=placemybet;UID=root;password=;SslMode=none";
             MySqlConnection con = new MySqlConnection(connString);
@@ -17,7 +17,7 @@ namespace AE2.Models
             return con;
         }
 
-        internal List<Usuarios> Retrieve()
+        internal List<Usuario> Retrieve()
         {
             MySqlConnection con = Connect();
             MySqlCommand command = con.CreateCommand();
@@ -41,6 +41,6 @@ namespace AE2.Models
                 Debug.WriteLine("Se ha producido un error: " + e);
                 return null;
             }
-        }
+        }*/
     }
 }

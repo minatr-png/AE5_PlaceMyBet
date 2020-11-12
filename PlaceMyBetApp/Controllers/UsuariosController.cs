@@ -11,13 +11,13 @@ namespace AE2.Controllers
     public class UsuariosController : ApiController
     {
         // GET: api/Usuarios
-        public IEnumerable<Usuarios> Get()
+        public IEnumerable<Usuario> Get()
         {
             var repo = new UsuariosRepository();
 
-            List<Usuarios> usus = repo.Retrieve();
+            //List<Usuario> usus = repo.Retrieve();
 
-            return usus;
+            return null;
         }
 
         // GET: api/Usuarios/5
