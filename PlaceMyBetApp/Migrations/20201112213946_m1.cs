@@ -47,7 +47,7 @@ namespace PlaceMyBetApp.Migrations
                     Tipo = table.Column<int>(nullable: false),
                     CuotaOver = table.Column<float>(nullable: false),
                     CuotaUnder = table.Column<float>(nullable: false),
-                    DineoroOver = table.Column<float>(nullable: false),
+                    DineroOver = table.Column<float>(nullable: false),
                     DineroUnder = table.Column<float>(nullable: false),
                     EventoId = table.Column<int>(nullable: false)
                 },

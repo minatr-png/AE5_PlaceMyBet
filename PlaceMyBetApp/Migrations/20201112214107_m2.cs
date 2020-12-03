@@ -29,7 +29,7 @@ namespace PlaceMyBetApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Mercados",
-                columns: new[] { "MercadoId", "CuotaOver", "CuotaUnder", "DineoroOver", "DineroUnder", "EventoId", "Tipo" },
+                columns: new[] { "MercadoId", "CuotaOver", "CuotaUnder", "DineroOver", "DineroUnder", "EventoId", "Tipo" },
                 values: new object[] { 1, 14f, 10f, 20f, 32f, 1, 2 });
         }
 
