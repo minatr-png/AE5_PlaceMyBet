@@ -20,7 +20,7 @@ namespace AE2.Models
 
             return mercados;
         }
-
+        
         internal Mercado Retrieve(int id)
         {
             Mercado mercado;
@@ -30,6 +30,14 @@ namespace AE2.Models
             }
 
             return mercado;
+        }
+
+        internal void Save(Mercado mercado)
+        {
+            PlaceMyBetContext context = new PlaceMyBetContext();
+
+            context.Mercados.Add(mercado);
+            context.SaveChanges();
         }
     }
 }

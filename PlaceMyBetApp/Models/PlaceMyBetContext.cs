@@ -29,7 +29,6 @@ namespace PlaceMyBetApp.Models
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseMySql("Server=localhost;Database=PlaceMyBet2;Uid=root;Pwd=''; SslMode = none");
-
             }
         }
 

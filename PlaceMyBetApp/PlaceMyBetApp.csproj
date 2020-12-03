@@ -340,6 +340,10 @@
     <Compile Include="Migrations\20201112214107_m2.designer.cs">
       <DependentUpon>20201112214107_m2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20201203105028_m3.cs" />
+    <Compile Include="Migrations\20201203105028_m3.designer.cs">
+      <DependentUpon>20201203105028_m3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PlaceMyBetContextModelSnapshot.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />

@@ -18,14 +18,6 @@ namespace AE2.Controllers
             return mercs;
         }
 
-        // GET: api/Mercados?eventoMer=valor1&tipo=valor2
-        /*public IEnumerable<MercadoDTO> GetEventoTipo(int eventoMer, int tipo)
-        {
-            var repo = new MercadosRepository();
-            //List<MercadoDTO> mercs = repo.RetrieveByEventoAndTipo(eventoMer, tipo);
-            return null;
-        }*/
-
         // GET: api/Mercados/5
         public Mercado Get(int id)
         {
@@ -34,9 +26,10 @@ namespace AE2.Controllers
             return merc;
         }
 
-        // POST: api/Mercados
-        public void Post([FromBody]string value)
+        public void Post(Mercado mercado)
         {
+            var repo = new MercadosRepository();
+            repo.Save(mercado);
         }
 
         // PUT: api/Mercados/5
