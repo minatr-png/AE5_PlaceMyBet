@@ -76,14 +76,6 @@ namespace AE2.Models
             }
         }
 
-        internal void Delete(Apuesta apuesta)
-        {
-            PlaceMyBetContext context = new PlaceMyBetContext();
-
-            context.Apuestas.Remove(apuesta);
-            context.SaveChanges();
-        }
-
         public ApuestaDTO ToDTO(Apuesta a)
         {
             return new ApuestaDTO(a.UsuarioId, a.Mercado.EventoId, a.Tipo, a.Cuota, a.Dinero);

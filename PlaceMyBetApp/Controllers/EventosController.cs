@@ -46,9 +46,11 @@ namespace AE2.Controllers
         {
         }
 
-        // DELETE: api/Eventos/5
+        // DELETE: api/Eventos/id
         public void Delete(int id)
         {
+            var repo = new EventosRepository();
+            repo.Delete(id);
         }
     }
 }
