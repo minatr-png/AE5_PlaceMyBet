@@ -31,5 +31,34 @@ namespace AE2.Models
 
             return apuesta;
         }
+
+        internal void Save(Apuesta apuesta)
+        {
+            PlaceMyBetContext contextApuesta = new PlaceMyBetContext();
+            contextApuesta.Apuestas.Add(apuesta);
+            contextApuesta.SaveChanges();
+
+            Mercado mercado;
+            using (PlaceMyBetContext contextMercado = new PlaceMyBetContext())
+            {
+                mercado = contextMercado.Mercados.Where(p => p.MercadoId == apuesta.MercadoId).FirstOrDefault();
+                if (apuesta.OverUnder == "over")
+                {
+                    mercado.DineroOver += apuesta.Dinero;
+
+                    float probabilidad = mercado.DineroOver / (mercado.DineroOver + mercado.DineroUnder);
+                    mercado.CuotaOver  = (float)(1 / probabilidad * 0.95); 
+                }
+                else
+                {
+                    mercado.DineroUnder += apuesta.Dinero;
+
+                    float probabilidad = mercado.DineroUnder / (mercado.DineroOver + mercado.DineroUnder);
+                    mercado.CuotaUnder = (float)(1 / probabilidad * 0.95);
+                }
+
+                contextMercado.SaveChanges();
+            }
+        }
     }
 }

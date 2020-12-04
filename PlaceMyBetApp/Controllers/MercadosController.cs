@@ -26,6 +26,7 @@ namespace AE2.Controllers
             return merc;
         }
 
+        // POST: api/Apuestas
         public void Post(Mercado mercado)
         {
             var repo = new MercadosRepository();

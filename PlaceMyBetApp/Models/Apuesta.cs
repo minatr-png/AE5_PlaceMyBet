@@ -27,6 +27,7 @@ namespace AE2.Models
         public string   OverUnder  { get; set; }
 
         public Mercado Mercado   { get; set; }
+        public int     MercadoId { get; set; }
         public Usuario Usuario   { get; set; }
         public string  UsuarioId { get; set; }
     }
