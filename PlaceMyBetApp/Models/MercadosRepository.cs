@@ -20,7 +20,21 @@ namespace AE2.Models
 
             return mercados;
         }
-        
+
+        internal List<MercadoDTO> RetrieveDTO()
+        {
+            List<Mercado> mercados = new List<Mercado>();
+            using (PlaceMyBetContext context = new PlaceMyBetContext())
+            {
+                mercados = context.Mercados.ToList();
+            }
+
+            List<MercadoDTO> mercadosDTO = new List<MercadoDTO>();
+            for (int i = 0; i < mercados.Count; i++) mercadosDTO.Add(ToDTO(mercados[i]));
+
+            return mercadosDTO;
+        }
+
         internal Mercado Retrieve(int id)
         {
             Mercado mercado;
@@ -38,6 +52,11 @@ namespace AE2.Models
 
             context.Mercados.Add(mercado);
             context.SaveChanges();
+        }
+
+        public MercadoDTO ToDTO(Mercado m) 
+        { 
+            return new MercadoDTO(m.Tipo, m.CuotaOver, m.CuotaUnder); 
         }
     }
 }

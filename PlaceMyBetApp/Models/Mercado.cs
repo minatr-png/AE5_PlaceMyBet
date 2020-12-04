@@ -29,4 +29,18 @@ namespace AE2.Models
         public int           EventoId { get; set; }
         public List<Apuesta> Apuestas { get; set; }
     }
+
+    public class MercadoDTO
+    {
+        public MercadoDTO(int tipo, float cuotaOver, float cuotaUnder)
+        {
+            Tipo       = tipo;
+            CuotaOver  = cuotaOver;
+            CuotaUnder = cuotaUnder;
+        }
+
+        public int   Tipo       { get; set; }
+        public float CuotaOver  { get; set; }
+        public float CuotaUnder { get; set; }
+    }
 }
