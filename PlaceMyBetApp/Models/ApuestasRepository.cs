@@ -2,6 +2,7 @@
 using PlaceMyBetApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,7 @@ namespace AE2.Models
             List<Apuesta> apuestas = new List<Apuesta>();
             using (PlaceMyBetContext context = new PlaceMyBetContext())
             {
-                apuestas = context.Apuestas.ToList();
+                apuestas = context.Apuestas.Include(p => p.Mercado).ToList();
             }
 
             return apuestas;

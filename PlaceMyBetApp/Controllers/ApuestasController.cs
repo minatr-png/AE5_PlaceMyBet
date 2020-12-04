@@ -27,7 +27,7 @@ namespace AE2.Controllers
             return null;
         }*/
 
-        // GET: api/Apuestas/5
+        // GET: api/Apuestas/id
         public Apuesta Get(int id)
         {
             var repo = new ApuestasRepository();
