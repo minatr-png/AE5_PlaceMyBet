@@ -50,6 +50,10 @@ namespace AE2.Controllers
         // DELETE: api/Apuestas/5
         public void Delete(int id)
         {
+            var repo = new ApuestasRepository();
+            Apuesta apu = repo.Retrieve(id);
+
+            repo.Delete(apu);
         }
     }
 }
