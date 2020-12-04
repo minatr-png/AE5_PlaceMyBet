@@ -31,4 +31,22 @@ namespace AE2.Models
         public Usuario Usuario   { get; set; }
         public string  UsuarioId { get; set; }
     }
+
+    public class ApuestaDTO
+    {
+        public ApuestaDTO(string usuarioID, int eventoId, int tipo, float cuota, float dinero)
+        {
+            UsuarioId = usuarioID;
+            EventoId  = eventoId;
+            Tipo      = tipo;
+            Cuota     = cuota;
+            Dinero    = dinero;
+        }
+
+        public int    Tipo      { get; set; }
+        public float  Cuota     { get; set; }
+        public float  Dinero    { get; set; }
+        public int    EventoId  { get; set; }
+        public string UsuarioId { get; set; }
+    }
 }

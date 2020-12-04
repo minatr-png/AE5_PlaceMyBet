@@ -22,6 +22,20 @@ namespace AE2.Models
             return apuestas;
         }
 
+        internal List<ApuestaDTO> RetrieveDTO()
+        {
+            List<Apuesta> apuestas = new List<Apuesta>();
+            using (PlaceMyBetContext context = new PlaceMyBetContext())
+            {
+                apuestas = context.Apuestas.Include(p => p.Mercado).ToList();
+            }
+
+            List<ApuestaDTO> apuestasDTO = new List<ApuestaDTO>();
+            for (int i = 0; i < apuestas.Count; i++) apuestasDTO.Add(ToDTO(apuestas[i]));
+
+            return apuestasDTO;
+        }
+
         internal Apuesta Retrieve(int id)
         {
             Apuesta apuesta;
@@ -60,6 +74,11 @@ namespace AE2.Models
 
                 contextMercado.SaveChanges();
             }
+        }
+
+        public ApuestaDTO ToDTO(Apuesta a)
+        {
+            return new ApuestaDTO(a.UsuarioId, a.Mercado.EventoId, a.Tipo, a.Cuota, a.Dinero);
         }
     }
 }

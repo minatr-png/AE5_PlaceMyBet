@@ -12,10 +12,10 @@ namespace AE2.Controllers
     {
         // GET: api/Apuestas
         //[Authorize(Roles = "Admin")]
-        public IEnumerable<Apuesta> Get()
+        public IEnumerable<ApuestaDTO> Get()
         {
             var repo = new ApuestasRepository();
-            List<Apuesta> apus = repo.Retrieve();
+            List<ApuestaDTO> apus = repo.RetrieveDTO();
             return apus;
         }
 
