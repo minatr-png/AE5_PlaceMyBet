@@ -42,8 +42,10 @@ namespace AE2.Controllers
         }
 
         // PUT: api/Eventos/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, string nuevo_local, string nuevo_visitante)
         {
+            var repo = new EventosRepository();
+            repo.Update(id, nuevo_local, nuevo_visitante);
         }
 
         // DELETE: api/Eventos/id
