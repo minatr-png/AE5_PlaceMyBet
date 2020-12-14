@@ -37,9 +37,9 @@ namespace AE2.Controllers
         }
 
         // POST: api/Eventos
-        public void Post([FromBody]string value)
+        /*public void Post([FromBody]string value)
         {
-        }
+        }*/
 
         // PUT: api/Eventos/5
         public void Put(int id, string nuevo_local, string nuevo_visitante)

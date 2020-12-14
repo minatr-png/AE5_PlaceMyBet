@@ -1,0 +1,65 @@
+[33mcommit 7ee7aec06862d7f126a29cf5455c8ba90762362e[m[33m ([m[1;36mHEAD -> [m[1;32mAE6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/AE6[m[33m, [m[1;32mmain[m[33m)[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 18:10:05 2020 +0100
+
+    PUT Eventos hecho
+
+[33mcommit fc4c16d069b22f040d98d651205bf8f137830973[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 17:56:10 2020 +0100
+
+    DELETE Eventos hecho (DELETE Apuestas eliminado, me había equivocado)
+
+[33mcommit fd6d0ec59a4c2b9f91f94983b43bc931da28ed58[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 15:48:28 2020 +0100
+
+    DELETE Apuesta hecho
+
+[33mcommit bbbf77f7a6e762ecc33245a70949475894bb2196[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 14:10:21 2020 +0100
+
+    GET ApuestaDTO hecho (fallo)
+
+[33mcommit 949859a01176931ad4e721bd8f3928064891c6af[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 12:41:34 2020 +0100
+
+    GET MercadoDTO hecho
+
+[33mcommit 8af791a03d92399938197698a0c0236134b2a3f6[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 11:55:02 2020 +0100
+
+    Get de apuesta que devuelve su mercado hecho (fallo)
+
+[33mcommit 09e93c3118a31af1e7f0b22be26285a59ba2f5ee[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Fri Dec 4 11:20:27 2020 +0100
+
+    Post apuesta
+
+[33mcommit 07bdbf401e53ec886a60bc205b110aaf10fe5b15[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Thu Dec 3 12:26:54 2020 +0100
+
+    Error arreglado (Se había escrito mal un dato y eso causaba tener la base de datos mal, por lo que he actualizado las migrations)
+
+[33mcommit d166365a815d683aba0471b44eeac5615f2f62b3[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Thu Dec 3 12:07:19 2020 +0100
+
+    Mercado post añadido pero da error
+
+[33mcommit 101016bf36177be74f100d85dfe015cf3d06f006[m[33m ([m[1;31morigin/AE5[m[33m)[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Thu Nov 12 23:34:52 2020 +0100
+
+    AE5 terminada
+
+[33mcommit 45329f75769d5e00fa6a0a9a72c7b8186d32a576[m
+Author: Miguel Navarro Travé <otracuentaderrellenomas@gmail.com>
+Date:   Thu Nov 12 14:29:36 2020 +0100
+
+    alle va
