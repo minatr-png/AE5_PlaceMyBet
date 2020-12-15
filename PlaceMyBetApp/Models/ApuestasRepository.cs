@@ -60,12 +60,12 @@ namespace AE2.Models
             for (int i = 0; i < apuestas.Count; i++)
             {
                 Apuesta apuesta = apuestas[i];
-                Evento evento;
+                Mercado mercado;
                 using (PlaceMyBetContext context = new PlaceMyBetContext())
                 {
-                    evento = context.Eventos.Where(s => s.EventoId == apuesta.MercadoId).FirstOrDefault(); 
+                    mercado = context.Mercados.Where(s => s.MercadoId == apuesta.MercadoId).Include(m => m.Evento).FirstOrDefault(); 
                 }
-                apuestasExamen2.Add(new ApuestaExamen2(apuesta.OverUnder, ))
+                apuestasExamen2.Add(new ApuestaExamen2(apuesta.OverUnder, mercado.Evento.NomLocal, mercado.Evento.NomVisitante));
             }
 
             return apuestasExamen2;
