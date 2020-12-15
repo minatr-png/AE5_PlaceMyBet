@@ -47,6 +47,31 @@ namespace AE2.Models
             return apuesta;
         }
 
+        /***Inicio ejercicio 2 EXAMEN***/
+        internal List<ApuestaExamen2> RetrieveExamen(float dinero)
+        {
+            List<Apuesta> apuestas = new List<Apuesta>();
+            using (PlaceMyBetContext context = new PlaceMyBetContext())
+            {
+                apuestas = context.Apuestas.Where(s => s.Dinero > dinero).Include(p => p.Mercado).ToList();
+            }
+
+            List<ApuestaExamen2> apuestasExamen2 = new List<ApuestaExamen2>();
+            for (int i = 0; i < apuestas.Count; i++)
+            {
+                Apuesta apuesta = apuestas[i];
+                Evento evento;
+                using (PlaceMyBetContext context = new PlaceMyBetContext())
+                {
+                    evento = context.Eventos.Where(s => s.EventoId == apuesta.MercadoId).FirstOrDefault(); 
+                }
+                apuestasExamen2.Add(new ApuestaExamen2(apuesta.OverUnder, ))
+            }
+
+            return apuestasExamen2;
+        }
+        /***Final ejercicio 2 EXAMEN***/
+
         internal void Save(Apuesta apuesta)
         {
             PlaceMyBetContext contextApuesta = new PlaceMyBetContext();

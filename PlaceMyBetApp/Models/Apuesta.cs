@@ -49,4 +49,36 @@ namespace AE2.Models
         public int    EventoId  { get; set; }
         public string UsuarioId { get; set; }
     }
+
+    /***Inicio ejercicio 1 EXAMEN***/
+    public class ApuestaExamen
+    {
+        public ApuestaExamen(float dinero_Apostado, string tipo, string nombre)
+        {
+            Dinero_Apostado = dinero_Apostado;
+            Tipo            = tipo;
+            Nombre          = nombre;
+        }
+
+        public float  Dinero_Apostado { get; set; }
+        public string Tipo            { get; set; }
+        public string Nombre          { get; set; }
+    }
+    /***Final ejercicio 1 EXAMEN***/
+
+    /***Inicio ejercicio 2 EXAMEN***/
+    public class ApuestaExamen2
+    {
+        public ApuestaExamen2(string tipo, string equipo_local, string equipo_visitante)
+        {
+            Tipo             = tipo;
+            Equipo_local     = equipo_local;
+            Equipo_visitante = equipo_visitante;
+        }
+
+        public string Tipo             { get; set; }
+        public string Equipo_local     { get; set; }
+        public string Equipo_visitante { get; set; }
+    }
+    /***Final ejercicio 2 EXAMEN***/
 }

@@ -19,13 +19,15 @@ namespace AE2.Controllers
             return mercs;
         }
 
+        /***Inicio ejercicio 1 EXAMEN***/
         // GET: api/Mercados/5
-        public Mercado Get(int id)
+        public List<ApuestaExamen> Get(int id)
         {
             var repo = new MercadosRepository();
-            Mercado merc = repo.Retrieve(id);
+            List<ApuestaExamen> merc = repo.RetrieveExamen(id);
             return merc;
         }
+        /***Final ejercicio 1 EXAMEN***/
 
         // POST: api/Apuestas
         public void Post(Mercado mercado)

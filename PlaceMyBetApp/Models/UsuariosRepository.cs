@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PlaceMyBetApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

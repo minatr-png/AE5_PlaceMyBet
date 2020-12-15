@@ -28,12 +28,21 @@ namespace AE2.Controllers
         }*/
 
         // GET: api/Apuestas/id
-        public Apuesta Get(int id)
+        /*public Apuesta Get(int id)
         {
             var repo = new ApuestasRepository();
             Apuesta apu = repo.Retrieve(id);
             return apu;
-        }
+        }*/
+
+        /***Inicio ejercicio 1 EXAMEN***/
+        /*public Apuesta Get(float dinero)
+        {
+            var repo = new ApuestasRepository();
+            Apuesta apu = repo.Retrieve(dinero);
+            return apu;
+        }*/
+        /***Final ejercicio 1 EXAMEN***/
 
         // POST: api/Apuestas
         public void Post(Apuesta apuesta)
