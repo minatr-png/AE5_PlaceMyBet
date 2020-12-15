@@ -35,14 +35,14 @@ namespace AE2.Controllers
             return apu;
         }*/
 
-        /***Inicio ejercicio 1 EXAMEN***/
+        /***Inicio ejercicio 2 EXAMEN***/
         public List<ApuestaExamen2> Get(float dinero)
         {
             var repo = new ApuestasRepository();
             List<ApuestaExamen2> apu = repo.RetrieveExamen(dinero);
             return apu;
         }
-        /***Final ejercicio 1 EXAMEN***/
+        /***Final ejercicio 2 EXAMEN***/
 
         // POST: api/Apuestas
         public void Post(Apuesta apuesta)
